@@ -1,6 +1,6 @@
 from gerenciador import Gerenciador
 
-def menu():
+def main():
     gerenciador = Gerenciador()
     
     while True:
@@ -92,3 +92,5 @@ def menu():
 
         else:
             print("Opção inválida. Tente novamente.")
+if __name__ == "__main__":
+    main()

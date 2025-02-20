@@ -29,7 +29,7 @@ class Persistencia:
     def carregar_usuarios(arquivo="usuarios.json"):
         try:
             with open(arquivo, "r") as f:
-                return list({u["email"]: Usuario(**u) for u in json.load(f)}.values())  # Remove duplicatas pelo e-mail
+                return list({u["email"]: Usuario(u["nome"], u["email"]) for u in json.load(f)}.values())
         except (FileNotFoundError, json.JSONDecodeError):
             return []
 
